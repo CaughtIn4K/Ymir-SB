@@ -14,6 +14,7 @@ import sys
 import website
 import base64
 import ctypes
+from discord_webhook import DiscordWebhook, DiscordEmbed
 
 REAL_PATH = os.path.dirname(os.path.realpath(__file__))
 
