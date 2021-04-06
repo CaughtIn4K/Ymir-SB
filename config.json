@@ -1,9 +1,6 @@
 {
-  ##main settings
   "prefix": "y!",
   "token": "",
-  
-  ##nuke settings
   "server-name": "Ran By Ymir",
   "webhook-name": "You Are A Subject Of Ymir",
   "webhook-spam": "@everyone discord.gg/ymir",
