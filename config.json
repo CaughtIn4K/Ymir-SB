@@ -1,0 +1,14 @@
+{
+  // main settings
+  "prefix": "y!",
+  "token": "",
+  
+  //nuke settings
+  "server-name": "Ran By Ymir",
+  "webhook-name": "You Are A Subject Of Ymir",
+  "webhook-spam": "@everyone discord.gg/ymir",
+  "channel-name": "Ymir Runs You",
+  "ban-reason": "Ymir Said So",
+  "webhook-avatar": "https://cdn.discordapp.com/attachments/806362867392839771/806373051771256852/image0.jpg",
+  "role-name": "Subjects of Ymir",
+}
